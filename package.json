@@ -1,6 +1,6 @@
 {
   "name": "npmsrcify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a",
   "main": "./src/cli.js",
   "bin": {
