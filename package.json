@@ -1,0 +1,61 @@
+{
+  "name": "npmsrcify",
+  "version": "0.0.1",
+  "description": "a",
+  "main": "./src/cli.js",
+  "bin": {
+    "npmsrcify": "./src/cli.js"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "fix": "eslint --fix ./src",
+    "prever": "npm run lint && git add -A && git commit -m 'release: release a new version'",
+    "ver": "standard-version -m 'chore(release): v%s'",
+    "postver": "git push --follow-tags origin master && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonChen1982/npmsrcify.git"
+  },
+  "author": {
+    "name": "jasonChen1982",
+    "email": "jasonchen1882@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonChen1982/npmsrcify/issues"
+  },
+  "homepage": "https://github.com/jasonChen1982/npmsrcify#readme",
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-google": "^0.9.1",
+    "husky": "^0.14.3",
+    "standard-version": "^4.3.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "release",
+        "build",
+        "revert",
+        "deps"
+      ]
+    }
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "fs-extra": "^5.0.0",
+    "update-notifier": "^2.3.0",
+    "yargs": "^11.0.0"
+  }
+}
